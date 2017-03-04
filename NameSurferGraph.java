@@ -68,7 +68,22 @@ public class NameSurferGraph extends GCanvas
         add(one);
         two = new GLine(2*spread, 0, 2*spread, APPLICATION_HEIGHT);
         add(two);
-        
+        three = new GLine(3*spread, 0, 3*spread, APPLICATION_HEIGHT);
+        add(three);
+        four = new GLine(4*spread, 0, 4*spread, APPLICATION_HEIGHT);
+        add(four);
+        five = new GLine(5*spread, 0, 5*spread, APPLICATION_HEIGHT);
+        add(five);
+        six = new GLine(6*spread, 0, 6*spread, APPLICATION_HEIGHT);
+        add(six);
+        seven = new GLine(7*spread, 0, 7*spread, APPLICATION_HEIGHT);
+        add(seven);
+        eight = new GLine(8*spread, 0, 8*spread, APPLICATION_HEIGHT);
+        add(eight);
+        nine = new GLine(9*spread, 0, 9*spread, APPLICATION_HEIGHT);
+        add(nine);
+        ten = new GLine(10*spread, 0, 10*spread, APPLICATION_HEIGHT);
+        add(ten);
     }
 	
 
