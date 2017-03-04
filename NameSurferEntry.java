@@ -12,7 +12,6 @@ import java.util.*;
 
 public class NameSurferEntry implements NameSurferConstants {
 
-    /* Constructor: NameSurferEntry(line) */
     /**
      * Creates a new NameSurferEntry from a data line as it appears
      * in the data file.  Each line begins with the name, which is
@@ -27,9 +26,8 @@ public class NameSurferEntry implements NameSurferConstants {
             ranks[i-1] = Integer.parseInt(splitResult[i]);
         }
     }
-
     
-    /* Method: getName() */
+
     /**
      * Returns the name associated with this entry.
      */
@@ -38,7 +36,7 @@ public class NameSurferEntry implements NameSurferConstants {
         return name;
     }
 
-    /* Method: getRank(decade) */
+
     /**
      * Returns the rank associated with an entry for a particular
      * decade.  The decade value is an integer indicating how many
@@ -48,22 +46,20 @@ public class NameSurferEntry implements NameSurferConstants {
      */
     public int getRank(int decade) {
         // You need to turn this stub into a real implementation //
-        return 0;
+        return ranks[decade];
     }
 
-    /* Method: toString() */
+
     /**
      * Returns a string that makes it easy to see the value of a
      * NameSurferEntry.
      */
     public String toString() {
-        // You need to turn this stub into a real implementation //
         String result = name + " [";
         for (int i = 0; i<NDECADES; i++) {
             result += ranks[i];
             result += " ";
         }
-
         result += "]";
         return result;
     }
