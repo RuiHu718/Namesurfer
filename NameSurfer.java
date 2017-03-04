@@ -32,7 +32,15 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
      * button actions.
      */
     public void actionPerformed(ActionEvent e) {
-        // You fill this in //
+        if (e.getSource() == nameField) {
+            println("textField " + nameField.getText());
+        }
+        if (e.getActionCommand().equals("Graph")) {
+            println("button " + nameField.getText());
+        }
+        if (e.getActionCommand().equals("Clear")) {
+            println("Clear");
+        }
     }
 
 
