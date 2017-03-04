@@ -4,7 +4,7 @@
  * This class represents the canvas on which the graph of
  * names is drawn. This class is responsible for updating
  * (redrawing) the graphs whenever the list of entries changes or the window is resized.
- * need to commit
+ * 
  */
 
 import acm.graphics.*;
