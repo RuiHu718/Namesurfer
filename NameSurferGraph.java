@@ -60,15 +60,30 @@ public class NameSurferGraph extends GCanvas
         bottom = new GLine(0, GRAPH_MARGIN_SIZE+APPLICATION_HEIGHT, APPLICATION_WIDTH,
                            GRAPH_MARGIN_SIZE+APPLICATION_HEIGHT);
         add(bottom);
+
+        int spread = APPLICATION_WIDTH / 11;
         zero = new GLine(0, GRAPH_MARGIN_SIZE, 0, GRAPH_MARGIN_SIZE+APPLICATION_HEIGHT);
         add(zero);
+        one = new GLine(spread, GRAPH_MARGIN_SIZE, spread, GRAPH_MARGIN_SIZE+APPLICATION_HEIGHT);
+        add(one);
+        
     }
 	
 
     /* instance variables */
     private GLine top;
     private GLine bottom;
-    private GLine zero;
+    private GLine zero;         // represent the vertical line of 1900
+    private GLine one;
+    private GLine two;
+    private GLine three;
+    private GLine four;
+    private GLine five;
+    private GLine six;
+    private GLine seven;
+    private GLine eight;
+    private GLine nine;
+    private GLine ten;
 
     
     /* Implementation of the ComponentListener interface */
