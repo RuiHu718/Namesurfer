@@ -12,52 +12,63 @@ import java.util.*;
 import java.awt.*;
 
 public class NameSurferGraph extends GCanvas
-	implements NameSurferConstants, ComponentListener {
+    implements NameSurferConstants, ComponentListener {
 
-	/**
-	* Creates a new NameSurferGraph object that displays the data.
-	*/
-	public NameSurferGraph() {
-		addComponentListener(this);
-		//	 You fill in the rest //
-	}
+    /**
+     * Creates a new NameSurferGraph object that displays the data.
+     */
+    public NameSurferGraph() {
+        addComponentListener(this);
+        //	 You fill in the rest //
+    }
 	
-	/**
-	* Clears the list of name surfer entries stored inside this class.
-	*/
-	public void clear() {
-		//	 You fill this in //
-	}
+    /**
+     * Clears the list of name surfer entries stored inside this class.
+     */
+    public void clear() {
+        //	 You fill this in //
+    }
 	
-	/* Method: addEntry(entry) */
-	/**
-	* Adds a new NameSurferEntry to the list of entries on the display.
-	* Note that this method does not actually draw the graph, but
-	* simply stores the entry; the graph is drawn by calling update.
-	*/
-	public void addEntry(NameSurferEntry entry) {
-		// You fill this in //
-	}
-	
-	
-	
-	/**
-	* Updates the display image by deleting all the graphical objects
-	* from the canvas and then reassembling the display according to
-	* the list of entries. Your application must call update after
-	* calling either clear or addEntry; update is also called whenever
-	* the size of the canvas changes.
-	*/
-	public void update() {
-		//	 You fill this in //
-	}
+    /* Method: addEntry(entry) */
+    /**
+     * Adds a new NameSurferEntry to the list of entries on the display.
+     * Note that this method does not actually draw the graph, but
+     * simply stores the entry; the graph is drawn by calling update.
+     */
+    public void addEntry(NameSurferEntry entry) {
+        // You fill this in //
+    }
 	
 	
 	
+    /**
+     * Updates the display image by deleting all the graphical objects
+     * from the canvas and then reassembling the display according to
+     * the list of entries. Your application must call update after
+     * calling either clear or addEntry; update is also called whenever
+     * the size of the canvas changes.
+     */
+    public void update() {
+        drawFrameWork();
+    }
 	
-	/* Implementation of the ComponentListener interface */
-	public void componentHidden(ComponentEvent e) { }
-	public void componentMoved(ComponentEvent e) { }
-	public void componentResized(ComponentEvent e) { update(); }
-	public void componentShown(ComponentEvent e) { }
+
+
+    private void drawFrameWork() {
+        top = new GLine(0, GRAPH_MARGIN_SIZE, APPLICATION_WIDTH, GRAPH_MARGIN_SIZE);
+        add(top);
+    }
+	
+
+    /* instance variables */
+    private GLine top;
+    private GLine bottom;
+    private GLine zero;
+
+    
+    /* Implementation of the ComponentListener interface */
+    public void componentHidden(ComponentEvent e) { }
+    public void componentMoved(ComponentEvent e) { }
+    public void componentResized(ComponentEvent e) { update(); }
+    public void componentShown(ComponentEvent e) { }
 }
