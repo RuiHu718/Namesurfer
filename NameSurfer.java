@@ -34,7 +34,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
         // println(test.toString());
 
         NameSurferDataBase db = new NameSurferDataBase("names-data.txt");
-        println (db.findEntry("Sam").toString());
+        println (db.findEntry("Samantha").toString());
         
     }
 
