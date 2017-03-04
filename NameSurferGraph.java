@@ -50,6 +50,7 @@ public class NameSurferGraph extends GCanvas
      */
     public void update() {
         drawFrameWork();
+        drawFixedLabel();
     }
 	
 
@@ -85,6 +86,12 @@ public class NameSurferGraph extends GCanvas
         ten = new GLine(10*spread, 0, 10*spread, APPLICATION_HEIGHT);
         add(ten);
     }
+
+
+    private void drawFixedLabel() {
+        one_lab = new GLabel("1900", 0, APPLICATION_HEIGHT);
+        add(one_lab);
+    }
 	
 
     /* instance variables */
@@ -101,6 +108,7 @@ public class NameSurferGraph extends GCanvas
     private GLine eight;
     private GLine nine;
     private GLine ten;
+    private GLabel one_lab;
 
     
     /* Implementation of the ComponentListener interface */
