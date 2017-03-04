@@ -17,6 +17,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
      * and initializing the interactors at the bottom of the window.
      */
     public void init() {
+        add(new JButton("Graph"), SOUTH);        
         add(new JButton("Clear"), SOUTH);
     }
 
