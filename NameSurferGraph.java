@@ -63,7 +63,7 @@ public class NameSurferGraph extends GCanvas
 
         double[] test = {58, 69, 99, 131, 168, 238, 278, 380, 467, 408, 466};
         int spread_h = APPLICATION_WIDTH/11;
-        double spread_v = (APPLICATION_HEIGHT-2*GRAPH_MARGIN_SIZE) / 1000;
+        double spread_v = (APPLICATION_HEIGHT-2*GRAPH_MARGIN_SIZE) / 1000.0;
         for (int i = 0; i < 11; i++) {
             test[i] = test[i]*spread_v + GRAPH_MARGIN_SIZE;
         }
