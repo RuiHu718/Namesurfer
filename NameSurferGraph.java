@@ -106,9 +106,9 @@ public class NameSurferGraph extends GCanvas
         add(six_lab);
         seven_lab = new GLabel("1970", 7*spread, APPLICATION_HEIGHT);
         add(seven_lab);
-        eight_lab = new GLabel("1980", 0, APPLICATION_HEIGHT);
+        eight_lab = new GLabel("1980", 8*spread, APPLICATION_HEIGHT);
         add(eight_lab);
-        nine_lab = new GLabel("1990", 0, APPLICATION_HEIGHT);
+        nine_lab = new GLabel("1990", 9*spread, APPLICATION_HEIGHT);
         add(nine_lab);
         ten_lab = new GLabel("2000", 10*spread, APPLICATION_HEIGHT);
         add(ten_lab);
