@@ -57,14 +57,14 @@ public class NameSurferGraph extends GCanvas
     private void drawFrameWork() {
         top = new GLine(0, GRAPH_MARGIN_SIZE, APPLICATION_WIDTH, GRAPH_MARGIN_SIZE);
         add(top);
-        bottom = new GLine(0, GRAPH_MARGIN_SIZE+APPLICATION_HEIGHT, APPLICATION_WIDTH,
-                           GRAPH_MARGIN_SIZE+APPLICATION_HEIGHT);
+        bottom = new GLine(0, APPLICATION_HEIGHT-GRAPH_MARGIN_SIZE, APPLICATION_WIDTH,
+                           APPLICATION_HEIGHT-GRAPH_MARGIN_SIZE);
         add(bottom);
 
         int spread = APPLICATION_WIDTH / 11;
-        zero = new GLine(0, GRAPH_MARGIN_SIZE, 0, GRAPH_MARGIN_SIZE+APPLICATION_HEIGHT);
+        zero = new GLine(0, 0, 0, APPLICATION_HEIGHT);
         add(zero);
-        one = new GLine(spread, GRAPH_MARGIN_SIZE, spread, GRAPH_MARGIN_SIZE+APPLICATION_HEIGHT);
+        one = new GLine(spread, 0, spread, APPLICATION_HEIGHT);
         add(one);
         
     }
