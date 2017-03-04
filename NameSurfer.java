@@ -10,7 +10,7 @@ import acm.program.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
+public class NameSurfer extends Program implements NameSurferConstants {
 
     /* Method: init() */
     /**
@@ -27,14 +27,17 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 
         addActionListeners();
 
+        graph = new NameSurferGraph();
+        add(graph);
+
         // NameSurferEntry test = new NameSurferEntry("Sam 58 69 99 131 168 236 278 380 467 408 466");
         // println(test.getName());
         // println(test.getRank(0));
         // println(test.getRank(2));        
         // println(test.toString());
 
-        NameSurferDataBase db = new NameSurferDataBase("names-data.txt");
-        println (db.findEntry("Samantha").toString());
+        //NameSurferDataBase db = new NameSurferDataBase("names-data.txt");
+        //        println (db.findEntry("Samantha").toString()); 
         
     }
 
@@ -46,18 +49,19 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
      */
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == nameField) {
-            println("textField " + nameField.getText());
+            //            println("textField " + nameField.getText());
         }
         if (e.getActionCommand().equals("Graph")) {
-            println("button " + nameField.getText());
+            //            println("button " + nameField.getText());
         }
         if (e.getActionCommand().equals("Clear")) {
-            println("Clear");
+            //            println("Clear");
         }
     }
 
 
     /* Instance variables */
     private JTextField nameField;
+    private NameSurferGraph graph;
     
 }
