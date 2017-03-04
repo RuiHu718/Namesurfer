@@ -61,6 +61,7 @@ public class NameSurferEntry implements NameSurferConstants {
         String result = name + " [";
         for (int i = 0; i<NDECADES; i++) {
             result += ranks[i];
+            result += " ";
         }
 
         result += "]";
