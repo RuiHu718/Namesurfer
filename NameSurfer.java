@@ -23,6 +23,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
         nameField.addActionListener(this);
         add(new JButton("Graph"), SOUTH);        
         add(new JButton("Clear"), SOUTH);
+
+        addActionListeners();
     }
 
     /* Method: actionPerformed(e) */
