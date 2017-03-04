@@ -6,7 +6,6 @@
  * of that name for each decade stretching back to 1900.
  */
 
-//import acm.program.*;           // for testing
 import acm.util.*;
 import java.util.*;
 
