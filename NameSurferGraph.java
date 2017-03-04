@@ -68,13 +68,17 @@ public class NameSurferGraph extends GCanvas
             test[i] = test[i]*spread_v + GRAPH_MARGIN_SIZE;
         }
 
-        for (int j = 0; j < 10; j++) {
-            GLine t = new GLine(0, APPLICATION_HEIGHT/2, APPLICATION_WIDTH, APPLICATION_HEIGHT/2);
-            add(t);
+        GLine t = new GLine(0, test[0], spread_h, test[1]);
+        add(t);
             
-            GLine temp = new GLine(j*spread_h, test[j], (j+1)*spread_h, test[j+1]);
-            add(temp);
-        }
+        
+        // for (int j = 0; j < 10; j++) {
+        //     GLine t = new GLine(0, APPLICATION_HEIGHT/2, APPLICATION_WIDTH, APPLICATION_HEIGHT/2);
+        //     add(t);
+            
+        //     GLine temp = new GLine(j*spread_h, test[j], (j+1)*spread_h, test[j+1]);
+        //     add(temp);
+        // }
     }
 
     private void drawFrameWork() {
