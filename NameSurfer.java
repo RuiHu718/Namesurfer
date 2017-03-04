@@ -27,11 +27,14 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 
         addActionListeners();
 
-        NameSurferEntry test = new NameSurferEntry("Sam 58 69 99 131 168 236 278 380 467 408 466");
-        println(test.getName());
-        println(test.getRank(0));
-        println(test.getRank(2));        
-        println(test.toString());
+        // NameSurferEntry test = new NameSurferEntry("Sam 58 69 99 131 168 236 278 380 467 408 466");
+        // println(test.getName());
+        // println(test.getRank(0));
+        // println(test.getRank(2));        
+        // println(test.toString());
+
+        NameSurferDataBase db = new NameSurferDataBase("names-data.txt");
+        println (db.findEntry("Sam").toString());
         
     }
 
