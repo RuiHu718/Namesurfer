@@ -28,6 +28,9 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
         addActionListeners();
 
         NameSurferEntry test = new NameSurferEntry("Sam 58 69 99 131 168 236 278 380 467 408 466");
+        println(test.getName());
+        println(test.getRank(0));
+        println(test.getRank(5));        
         println(test.toString());
         
     }
