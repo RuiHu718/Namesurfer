@@ -58,6 +58,8 @@ public class NameSurferGraph extends GCanvas
 
     // test things out here
     private void drawGraph() {
+        GLine t = new GLine(0, APPLICATION_HEIGHT/2, APPLICATION_WIDTH, APPLICATION_HEIGHT/2);
+        add(t);
         double[] test = {58, 69, 99, 131, 168, 238, 278, 380, 467, 408, 466};
         int spread_h = APPLICATION_WIDTH/11;
         double spread_v = (APPLICATION_HEIGHT-2*GRAPH_MARGIN_SIZE) / 1000;
