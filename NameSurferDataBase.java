@@ -14,7 +14,6 @@ import java.io.*;
 
 public class NameSurferDataBase implements NameSurferConstants {
 	
-    /* Constructor: NameSurferDataBase(filename) */
     /**
      * Creates a new NameSurferDataBase and initializes it using the
      * data in the specified file.  The constructor throws an error
@@ -60,7 +59,7 @@ public class NameSurferDataBase implements NameSurferConstants {
         return rd;
     }
 
-    /* Method: findEntry(name) */
+
     /**
      * Returns the NameSurferEntry associated with this name, if one
      * exists.  If the name does not appear in the database, this
