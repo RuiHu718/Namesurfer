@@ -52,9 +52,24 @@ public class NameSurferGraph extends GCanvas
     public void update() {
         drawFrameWork();
         drawFixedLabel();
+        drawGraph();
     }
 	
 
+    // test things out here
+    private void drawGraph() {
+        double[] test = {58, 69, 99, 131, 168, 238, 278, 380, 467, 408, 466};
+        int spread_h = APPLICATION_WIDTH/11;
+        double spread_v = (APPLICATION_HEIGHT-2*GRAPH_MARGIN_SIZE) / 1000;
+        for (int i = 0; i < 11; i++) {
+            test[i] = test[i]*spread_v + GRAPH_MARGIN_SIZE;
+        }
+
+        for (int j = 0; j < 10; j++) {
+            GLine temp = new GLine(j*spread_h, test[j], (j+1)*spread_h, test[j+1]);
+            add(temp);
+        }
+    }
 
     private void drawFrameWork() {
         top = new GLine(0, GRAPH_MARGIN_SIZE, APPLICATION_WIDTH, GRAPH_MARGIN_SIZE);
