@@ -17,6 +17,10 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
      * and initializing the interactors at the bottom of the window.
      */
     public void init() {
+        nameField = new JTextField(10);
+        add(new JLabel("Name"), SOUTH);
+        add(nameField, SOUTH);
+        nameField.addActionListener(this);
         add(new JButton("Graph"), SOUTH);        
         add(new JButton("Clear"), SOUTH);
     }
@@ -33,6 +37,6 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 
 
     /* Instance variables */
-    
+    private JTextField nameField;
     
 }
