@@ -6,19 +6,12 @@
  * of that name for each decade stretching back to 1900.
  */
 
-import acm.program.*;           // for testing
+//import acm.program.*;           // for testing
 import acm.util.*;
 import java.util.*;
 
-public class NameSurferEntry extends ConsoleProgram implements NameSurferConstants {
+public class NameSurferEntry implements NameSurferConstants {
 
-    // for testing purpose 
-    public void main() {
-        NameSurferEntry test = new NameSurferEntry("Sam 58 69 99 131 168 236 278 380 467 408 466");
-        println(test.toString());
-    }
-
-    
     /* Constructor: NameSurferEntry(line) */
     /**
      * Creates a new NameSurferEntry from a data line as it appears

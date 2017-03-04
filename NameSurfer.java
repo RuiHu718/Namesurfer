@@ -26,6 +26,10 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
         add(new JButton("Clear"), SOUTH);
 
         addActionListeners();
+
+        NameSurferEntry test = new NameSurferEntry("Sam 58 69 99 131 168 236 278 380 467 408 466");
+        println(test.toString());
+        
     }
 
     /* Method: actionPerformed(e) */
