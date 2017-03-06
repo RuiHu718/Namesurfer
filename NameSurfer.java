@@ -10,7 +10,7 @@ import acm.program.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class NameSurfer extends Program implements NameSurferConstants {
+public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 
     /* Method: init() */
     /**
@@ -59,7 +59,8 @@ public class NameSurfer extends Program implements NameSurferConstants {
             //            println("button " + nameField.getText());
         }
         if (e.getActionCommand().equals("Clear")) {
-            graph.update();
+            println("button " + "clear");
+            //graph.update();
         }
     }
 
