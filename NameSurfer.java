@@ -52,14 +52,14 @@ public class NameSurfer extends Program implements NameSurferConstants {
             //            println("textField " + nameField.getText());
             entry = sd.findEntry(nameField.getText());
             graph.addEntry(entry);
-            graph.update();
+            graph.drawAllEntries();
             
         }
         if (e.getActionCommand().equals("Graph")) {
             //            println("button " + nameField.getText());
         }
         if (e.getActionCommand().equals("Clear")) {
-            graph.clear();
+            graph.update();
         }
     }
 
