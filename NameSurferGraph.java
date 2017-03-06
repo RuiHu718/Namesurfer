@@ -57,7 +57,7 @@ public class NameSurferGraph extends GCanvas
     }
 
 
-    private void drawAllEntries() {
+    public void drawAllEntries() {
         for (int i = 0; i < entries.size(); i++) {
             drawGraph(entries.get(i));
         }
