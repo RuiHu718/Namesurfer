@@ -29,7 +29,7 @@ public class NameSurferGraph extends GCanvas
      */
     public void clear() {
         entries.clear();
-        update();
+        this.update();
     }
 	
 
