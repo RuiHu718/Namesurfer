@@ -53,7 +53,7 @@ public class NameSurferGraph extends GCanvas
         removeAll();
         drawFrameWork();
         drawFixedLabel();
-        // drawAllEntries();
+        drawAllEntries();
     }
 
 
