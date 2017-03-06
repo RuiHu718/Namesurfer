@@ -28,9 +28,7 @@ public class NameSurferGraph extends GCanvas
      * Clears the list of name surfer entries stored inside this class.
      */
     public void clear() {
-        for (int i = 0; i < entries.size(); i++) {
-            entries.remove(i);
-        }
+        entries.clear();
         update();
     }
 	
