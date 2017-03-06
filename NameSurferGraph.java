@@ -73,7 +73,12 @@ public class NameSurferGraph extends GCanvas
         int spread_h = APPLICATION_WIDTH/11;
         double spread_v = (APPLICATION_HEIGHT-2*GRAPH_MARGIN_SIZE) / 1000.0;
         for (int i = 0; i < 11; i++) {
-            points[i] = entry.getRank(i)*spread_v + GRAPH_MARGIN_SIZE;
+            // check special case where name is outside range 1000
+            if (entry.getRank(i) == 0){
+                points[i] = APPLICATION_HEIGHT - GRAPH_MARGIN_SIZE;
+            } else {
+                points[i] = entry.getRank(i)*spread_v + GRAPH_MARGIN_SIZE;
+            }                
         }
 
         // GLine t = new GLine(0, test[0], spread_h, test[1]);
