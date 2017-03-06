@@ -31,7 +31,7 @@ public class NameSurferGraph extends GCanvas
         for (int i = 0; i < entries.size(); i++) {
             entries.remove(i);
         }
-        this.update();
+        update();
     }
 	
 
