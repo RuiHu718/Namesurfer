@@ -23,23 +23,23 @@ public class NameSurferGraph extends GCanvas
         //	 You fill in the rest //
     }
 	
+
     /**
      * Clears the list of name surfer entries stored inside this class.
      */
     public void clear() {
-        //	 You fill this in //
+        removeAll();
     }
 	
-    /* Method: addEntry(entry) */
+
     /**
      * Adds a new NameSurferEntry to the list of entries on the display.
      * Note that this method does not actually draw the graph, but
      * simply stores the entry; the graph is drawn by calling update.
      */
     public void addEntry(NameSurferEntry entry) {
-        // You fill this in //
+        entries.add(entry);
     }
-	
 	
 	
     /**
@@ -52,28 +52,35 @@ public class NameSurferGraph extends GCanvas
     public void update() {
         drawFrameWork();
         drawFixedLabel();
-        drawGraph();
+        drawAllEntries();
     }
-	
+
+
+    public void drawAllEntries() {
+        for (int i = 0; i < entries.size(); i++) {
+            drawGraph(entries.get(i));
+        }
+    }
 
     // test things out here
-    private void drawGraph() {
+    private void drawGraph(NameSurferEntry entry) {
         // GLine t = new GLine(0, APPLICATION_HEIGHT/2, APPLICATION_WIDTH, APPLICATION_HEIGHT/2);
         // add(t);
 
-        double[] test = {58, 69, 99, 131, 168, 238, 278, 380, 467, 408, 466};
+        double[] points = new double[11];
+        //double[] test = {58, 69, 99, 131, 168, 238, 278, 380, 467, 408, 466};
         int spread_h = APPLICATION_WIDTH/11;
         double spread_v = (APPLICATION_HEIGHT-2*GRAPH_MARGIN_SIZE) / 1000.0;
         for (int i = 0; i < 11; i++) {
-            test[i] = test[i]*spread_v + GRAPH_MARGIN_SIZE;
+            points[i] = entry.getRank(i)*spread_v + GRAPH_MARGIN_SIZE;
         }
 
         // GLine t = new GLine(0, test[0], spread_h, test[1]);
         // add(t);
         
         for (int j = 0; j < 10; j++) {
-            GLine temp = new GLine(j*spread_h, test[j], (j+1)*spread_h, test[j+1]);
-            add(temp);
+            GLine line = new GLine(j*spread_h, points[j], (j+1)*spread_h, points[j+1]);
+            add(line);
         }
     }
 
@@ -162,7 +169,9 @@ public class NameSurferGraph extends GCanvas
     private GLabel seven_lab;
     private GLabel eight_lab;
     private GLabel nine_lab;
-    private GLabel ten_lab;    
+    private GLabel ten_lab;
+    private ArrayList<NameSurferEntry> entries =
+        new ArrayList<NameSurferEntry>();
 
 
     
