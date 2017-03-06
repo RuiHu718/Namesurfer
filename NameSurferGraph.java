@@ -29,7 +29,6 @@ public class NameSurferGraph extends GCanvas
      */
     public void clear() {
         entries.clear();
-        this.update();
     }
 	
 
@@ -51,9 +50,10 @@ public class NameSurferGraph extends GCanvas
      * the size of the canvas changes.
      */
     public void update() {
-        drawFrameWork();
-        drawFixedLabel();
-        drawAllEntries();
+        removeAll();
+        // drawFrameWork();
+        // drawFixedLabel();
+        // drawAllEntries();
     }
 
 
