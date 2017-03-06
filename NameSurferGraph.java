@@ -51,13 +51,13 @@ public class NameSurferGraph extends GCanvas
      */
     public void update() {
         removeAll();
-        // drawFrameWork();
-        // drawFixedLabel();
+        drawFrameWork();
+        drawFixedLabel();
         // drawAllEntries();
     }
 
 
-    public void drawAllEntries() {
+    private void drawAllEntries() {
         for (int i = 0; i < entries.size(); i++) {
             drawGraph(entries.get(i));
         }
