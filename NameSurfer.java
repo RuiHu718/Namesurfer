@@ -60,6 +60,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
         }
         if (e.getActionCommand().equals("Clear")) {
             graph.clear();
+            graph.update();
         }
     }
 
