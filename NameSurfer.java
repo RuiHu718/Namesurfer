@@ -52,6 +52,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
             //            println("textField " + nameField.getText());
             entry = sd.findEntry(nameField.getText());
             graph.addEntry(entry);
+            graph.update();
             
         }
         if (e.getActionCommand().equals("Graph")) {
