@@ -28,7 +28,10 @@ public class NameSurferGraph extends GCanvas
      * Clears the list of name surfer entries stored inside this class.
      */
     public void clear() {
-        removeAll();
+        for (int i = 0; i < entries.size(); i++) {
+            entries.remove(i);
+        }
+        this.update();
     }
 	
 
@@ -56,7 +59,7 @@ public class NameSurferGraph extends GCanvas
     }
 
 
-    public void drawAllEntries() {
+    private void drawAllEntries() {
         for (int i = 0; i < entries.size(); i++) {
             drawGraph(entries.get(i));
         }
